@@ -1,0 +1,96 @@
+/* Container for the shop component */
+.shop-container {
+  display: flex;
+  flex-direction: column; /* Stack heading and carousel vertically */
+  gap: 1rem; /* Space between heading and carousel */
+  padding: 1rem;
+  height: 90vh; /* Match the height of the HomeComponent */
+  align-items: center; /* Center the content horizontally */
+  overflow: hidden; /* Prevent overflow */
+}
+
+/* Heading for the shop component */
+.shop-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+}
+
+/* Carousel container */
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: calc(100% - 3rem); /* Fill remaining height minus the heading height */
+  position: relative;
+}
+
+/* Product list container */
+.product-list {
+  display: flex;
+  gap: 1rem; /* Space between cards */
+  justify-content: center;
+  align-items: center;
+  width: 80%; /* Limit the width of the carousel */
+  height: 100%; /* Fill the height of the carousel */
+  overflow: hidden; /* Hide overflowing cards */
+}
+
+/* Individual product cards */
+.product-card {
+  flex: 0 0 45%; /* Each card takes 45% of the container width */
+  height: 80%; /* Each card takes 80% of the product-list's height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Faded effect for non-focused cards */
+.product-card.faded {
+  opacity: 0.5; /* Half-faded */
+  transform: scale(0.9); /* Slightly smaller */
+}
+
+/* Carousel buttons */
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.carousel-button:hover {
+  opacity: 1;
+}
+
+.carousel-button.left {
+  left: 1rem;
+}
+
+.carousel-button.right {
+  right: 1rem;
+}
+
+.carousel-button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}

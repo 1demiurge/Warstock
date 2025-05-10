@@ -1,0 +1,19 @@
+:host {
+  display: block;
+  width: 100%;
+  height: 100%; /* Make the WikiComponent fill the height of its container */
+}
+
+.product-card {
+  text-align: center;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  height: 100%; /* Ensure the card fills the height of the WikiComponent */
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+}

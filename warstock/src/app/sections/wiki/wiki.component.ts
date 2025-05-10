@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-wiki',
-  imports: [],
+  standalone: true,
   templateUrl: './wiki.component.html',
-  styleUrl: './wiki.component.css'
+  styleUrls: ['./wiki.component.css']
 })
 export class WikiComponent {
-
+  @Input() product: { id: number; name: string; description: string } | undefined;
 }
