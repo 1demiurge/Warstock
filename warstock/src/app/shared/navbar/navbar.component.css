@@ -46,16 +46,18 @@
 .cart-button {
   background: none; /* Remove background */
   border: none; /* Remove border */
-  padding: 0; /* Remove padding */
+  padding: 0.5rem; /* Add padding for better click area */
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.2s ease; /* Add hover effect */
+  transition: background-color 0.2s ease; /* Smooth transition for hover effect */
+  border-radius: 4px; /* Match the nav-button hover style */
 }
 
 .cart-button:hover {
-  transform: scale(1.1); /* Slightly enlarge the icon on hover */
+  /* transform: scale(1.1);  */
+  background-color: #333; /* Highlight effect similar to nav-button */
 }
 
 /* Shopping cart icon */
@@ -63,6 +65,7 @@
   width: 24px; /* Adjust the size of the icon */
   height: 24px;
   display: block;
+  color: inherit; /* Inherit color from the cart button */
 }
 
 /* Hamburger Menu */
