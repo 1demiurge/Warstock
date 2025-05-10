@@ -1,16 +1,16 @@
 <div class="shop-container">
   <h2 class="shop-heading">Showcase</h2>
   <div class="carousel">
-    <button class="carousel-button left" (click)="prev()" [disabled]="currentIndex === 0">
-      &#9664; <!-- Left arrow -->
+    <button class="carousel-button left" (click)="prev()">
+      &#9664;
     </button>
     <div class="product-list">
       <div class="product-card" *ngFor="let product of visibleProducts">
         <app-wiki [product]="product"></app-wiki>
       </div>
     </div>
-    <button class="carousel-button right" (click)="next()" [disabled]="currentIndex + 2 >= products.length">
-      &#9654; <!-- Right arrow -->
+    <button class="carousel-button right" (click)="next()">
+      &#9654;
     </button>
   </div>
 </div>

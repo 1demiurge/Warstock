@@ -2,9 +2,8 @@
 .shop-container {
   display: flex;
   flex-direction: column; /* Stack heading and carousel vertically */
-  gap: 1rem; /* Space between heading and carousel */
-  padding: 1rem;
-  height: 90vh; /* Match the height of the HomeComponent */
+  padding: 2rem;
+  height: 85vh; /* Change height to 85% of the viewport */
   align-items: center; /* Center the content horizontally */
   overflow: hidden; /* Prevent overflow */
 }
@@ -14,7 +13,7 @@
   font-size: 2rem;
   font-weight: bold;
   text-align: center;
-  margin: 0;
+  margin: 0 1rem 1rem 1rem; 
 }
 
 /* Carousel container */
@@ -30,18 +29,20 @@
 /* Product list container */
 .product-list {
   display: flex;
-  gap: 1rem; /* Space between cards */
+  gap: 6rem; /* Space between cards */
   justify-content: center;
-  align-items: center;
+  align-items: flex-start; /* Align cards to the top */
   width: 80%; /* Limit the width of the carousel */
   height: 100%; /* Fill the height of the carousel */
+  padding: 4rem; /* Add padding around the product list */
   overflow: hidden; /* Hide overflowing cards */
+  position: relative;
 }
 
 /* Individual product cards */
 .product-card {
-  flex: 0 0 45%; /* Each card takes 45% of the container width */
-  height: 80%; /* Each card takes 80% of the product-list's height */
+  flex: 0 0 45%;
+  height: 80%;
   display: flex;
   justify-content: center;
   align-items: center;

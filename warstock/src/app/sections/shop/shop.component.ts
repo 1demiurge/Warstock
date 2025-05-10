@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectorRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { WikiComponent } from '../wiki/wiki.component';
 
@@ -10,7 +10,6 @@ import { WikiComponent } from '../wiki/wiki.component';
   styleUrls: ['./shop.component.css']
 })
 export class ShopComponent {
-  // Example product data
   products = [
     { id: 1, name: 'Product 1', description: 'Description for Product 1' },
     { id: 2, name: 'Product 2', description: 'Description for Product 2' },
@@ -19,24 +18,33 @@ export class ShopComponent {
     { id: 5, name: 'Product 5', description: 'Description for Product 5' }
   ];
 
-  currentIndex = 0; // Index of the first visible product card
+  currentIndex = 0;
+  visibleProducts = this.products.slice(0, 2);
 
-  // Get the two visible products based on the current index
-  get visibleProducts() {
-    return this.products.slice(this.currentIndex, this.currentIndex + 2);
-  }
+  constructor(private cdr: ChangeDetectorRef) {}
 
-  // Navigate to the previous set of products
   prev() {
-    if (this.currentIndex > 0) {
-      this.currentIndex -= 1;
+    if (this.currentIndex === 0) {
+      // Wrap around to the last two products
+      this.currentIndex = this.products.length - 2;
+    } else {
+      this.currentIndex--;
     }
+    this.updateVisibleProducts();
   }
 
-  // Navigate to the next set of products
   next() {
-    if (this.currentIndex + 2 < this.products.length) {
-      this.currentIndex += 1;
+    if (this.currentIndex + 2 >= this.products.length) {
+      // Wrap around to the first two products
+      this.currentIndex = 0;
+    } else {
+      this.currentIndex++;
     }
+    this.updateVisibleProducts();
+  }
+
+  private updateVisibleProducts() {
+    this.visibleProducts = this.products.slice(this.currentIndex, this.currentIndex + 2);
+    this.cdr.detectChanges();
   }
 }
