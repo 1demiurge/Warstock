@@ -3,42 +3,42 @@
     {
       "id": 1,
       "name": "Lazar",
-      "shortDescription": "A short description for Product 1.",
-      "longDescription": "A detailed and long description for Product 1, explaining its features and benefits.",
+      "shortDescription": "Dual cannons, radar-guided missiles, durable armor..",
+      "longDescription": "A classic military jet based on the F-16 Fighting Falcon, known for its agility and firepower with a Top Speed: 185 knots with Dual cannons, radar-guided missiles, durable armor.",
       "imagePath": ["assets/images/lazar.jpg"],
-      "price": 29.99
+      "price": 6500000
     },
     {
       "id": 2,
-      "name": "Product 2",
-      "shortDescription": "A short description for Product 2.",
-      "longDescription": "A detailed and long description for Product 2, explaining its features and benefits.",
+      "name": "Raiju",
+      "shortDescription": " The fastest and most advanced jet .",
+      "longDescription": "The fastest and most advanced jet , ideal for high-stakes aerial combat with features: VTOL capability, stealth mode, explosive cannons, homing missiles with Top Speed: 374 km/h (232 mph).",
       "imagePath": ["assets/images/product2.jpg"],
-      "price": 49.99
+      "price": 6855000
     },
     {
       "id": 3,
-      "name": "Product 3",
-      "shortDescription": "A short description for Product 3.",
-      "longDescription": "A detailed and long description for Product 3, explaining its features and benefits.",
+      "name": "Hercules",
+      "shortDescription": "Based on the AC-130 gunship.",
+      "longDescription": "A formidable aircraft designed for delivering massive firepower from the skies Based on the AC-130 gunship, equipped with heavy weaponry..",
       "imagePath": ["assets/images/product3.jpg"],
-      "price": 19.99
+      "price": 4870000
     },
     {
       "id": 4,
-      "name": "Product 4",
-      "shortDescription": "A short description for Product 4.",
-      "longDescription": "A detailed and long description for Product 4, explaining its features and benefits.",
+      "name": "Moltok",
+      "shortDescription": "A vintage jet fighter with impressive speed and firepower..",
+      "longDescription": "A vintage jet fighter with impressive speed and firepower Based on the MiG-15, equipped with machine guns and optional homing missiles with Top Speed: 207.75 mph.",
       "imagePath": ["assets/images/product4.jpg"],
-      "price": 39.99
+      "price": 4788000
     },
     {
       "id": 5,
-      "name": "Product 5",
-      "shortDescription": "A short description for Product 5.",
-      "longDescription": "A detailed and long description for Product 5, explaining its features and benefits.",
+      "name": "X Wing",
+      "shortDescription": "Fighter of the Galaxy.",
+      "longDescription": "Weapons:4x Taim & Bak KX9 laser cannons (wing-mounted) 2x Krupx MG7 proton torpedo launchers (with 6 torpedoes) Engines: 4x Incom 4L4 fusial thrust engines Speed: Sublight: ~1,050 km/h (atmospheric) Hyperdrive: Class 1.0 (faster than Imperial TIE Fighters, which lack hyperdrives)Shields: Equipped with deflector shield generators (defensive advantage over TIEs) Astromech Socket: R2 unit (for navigation, repairs, and targeting support)",
       "imagePath": ["assets/images/product5.jpg"],
-      "price": 59.99
+      "price": 20000000 
     }
   ]
 }
