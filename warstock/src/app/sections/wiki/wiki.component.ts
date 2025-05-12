@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Product } from '../../shared/IProduct'
 
 @Component({
   selector: 'app-wiki',
@@ -7,5 +8,5 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./wiki.component.css']
 })
 export class WikiComponent {
-  @Input() product: { id: number; name: string; description: string } | undefined;
+  @Input() product: Product | undefined;
 }
